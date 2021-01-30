@@ -1,0 +1,14 @@
+name: chest_flutter
+description: Utilities for working with Chest and Flutter.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  chest:
+    path: ../chest
+  flutter:
+    sdk: flutter
+  path_provider: any
