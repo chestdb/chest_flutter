@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:chest/chest.dart';
+import 'package:path_provider/path_provider.dart';
+
+Future<void> initializeChest() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  tape.rootPath = (await getApplicationDocumentsDirectory()).path;
+}
 
 class ReferenceBuilder<T> extends StatelessWidget {
   const ReferenceBuilder({
@@ -13,7 +19,7 @@ class ReferenceBuilder<T> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder<T>(
+    return StreamBuilder<void>(
       stream: reference.watch(),
       builder: (context, _) => builder(context),
     );
