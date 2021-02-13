@@ -1,3 +1,4 @@
+import 'package:async/async.dart';
 import 'package:flutter/material.dart';
 import 'package:chest/chest.dart';
 import 'package:path_provider/path_provider.dart';
@@ -21,6 +22,27 @@ class ReferenceBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return StreamBuilder<void>(
       stream: reference.watch(),
+      builder: (context, _) => builder(context),
+    );
+  }
+}
+
+class ReferencesBuilder extends StatelessWidget {
+  const ReferencesBuilder({
+    Key? key,
+    required this.references,
+    required this.builder,
+  }) : super(key: key);
+
+  final List<Reference<Object?>> references;
+  final WidgetBuilder builder;
+
+  @override
+  Widget build(BuildContext context) {
+    return StreamBuilder<void>(
+      stream: StreamGroup.merge(
+        references.map((reference) => reference.watch()),
+      ),
       builder: (context, _) => builder(context),
     );
   }
