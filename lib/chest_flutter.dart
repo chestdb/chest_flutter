@@ -7,15 +7,15 @@ Future<void> initializeChest() async {
   tape.rootPath = (await getApplicationDocumentsDirectory()).path;
 }
 
-class ReferenceBuilder<T> extends StatelessWidget {
+class ReferenceBuilder extends StatelessWidget {
   const ReferenceBuilder({
-    Key key,
-    @required this.reference,
-    @required this.builder,
+    Key? key,
+    required this.reference,
+    required this.builder,
   }) : super(key: key);
 
-  final Reference<T> reference;
-  final Widget Function(BuildContext) builder;
+  final Reference<Object?> reference;
+  final WidgetBuilder builder;
 
   @override
   Widget build(BuildContext context) {

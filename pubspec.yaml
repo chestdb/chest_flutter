@@ -4,11 +4,14 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0-0 <3.0.0"
 
 dependencies:
+  async: ^2.4.2
   chest:
     path: ../chest
   flutter:
     sdk: flutter
-  path_provider: any
+  flutter_tapers:
+    path: ../tapers/flutter_tapers
+  path_provider: ^1.6.27
