@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:chest/chest.dart';
 import 'package:path_provider/path_provider.dart';
 
+export 'package:chest/chest.dart';
+export 'package:flutter_tapers/flutter_tapers.dart';
+
 Future<void> initializeChest() async {
   WidgetsFlutterBinding.ensureInitialized();
   tape.rootPath = (await getApplicationDocumentsDirectory()).path;
