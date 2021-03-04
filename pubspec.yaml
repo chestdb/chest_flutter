@@ -1,15 +1,15 @@
 name: chest_flutter
 description: Utilities for working with Chest and Flutter.
-version: 0.1.0-0
+version: 0.1.1
 repository: https://github.com/chestdb/chest_flutter
 
 environment:
-  sdk: ">=2.12.0-0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   async: ^2.4.2
-  chest: ^0.1.0-0
+  chest: ^0.1.1
   flutter:
     sdk: flutter
-  flutter_tapers: ^0.1.0-0
+  flutter_tapers: ^0.1.1
   path_provider: ^1.6.27
