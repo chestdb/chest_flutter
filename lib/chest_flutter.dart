@@ -1,6 +1,6 @@
 import 'package:async/async.dart';
-import 'package:flutter/material.dart';
 import 'package:chest/chest.dart';
+import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 
 export 'package:chest/chest.dart';
@@ -13,10 +13,10 @@ Future<void> initializeChest() async {
 
 class ReferenceBuilder extends StatelessWidget {
   const ReferenceBuilder({
-    Key? key,
+    super.key,
     required this.reference,
     required this.builder,
-  }) : super(key: key);
+  });
 
   final Reference<Object?> reference;
   final WidgetBuilder builder;
@@ -32,10 +32,10 @@ class ReferenceBuilder extends StatelessWidget {
 
 class ReferencesBuilder extends StatelessWidget {
   const ReferencesBuilder({
-    Key? key,
+    super.key,
     required this.references,
     required this.builder,
-  }) : super(key: key);
+  });
 
   final List<Reference<Object?>> references;
   final WidgetBuilder builder;
